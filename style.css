@@ -42,6 +42,13 @@ a {
   margin-bottom: 10px;
 }
 
+img {
+  position: relative;
+  top: 20px;     /* Move down */
+  left: 10px;    /* Move right */
+}
+
+
 footer {
   text-align: center;
   padding: 10px;
