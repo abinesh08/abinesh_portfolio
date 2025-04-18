@@ -43,9 +43,12 @@ a {
 }
 
 img{
-  position: relative;
-  top: 40px;     /* Move down */
-  left: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Important: cover the circle nicely */
+  object-position: center; /* Keep the face or center in view */
+  border-radius: 50%;  /* Makes it circular */
+  display: block;
 }
 
 footer {
