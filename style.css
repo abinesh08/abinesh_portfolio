@@ -43,7 +43,10 @@ a {
 }
 
 img{
-  margin-top:10px 0px 10px:
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    overflow-x: 10px;
+    overflow-y: ;
 }
 
 footer {
