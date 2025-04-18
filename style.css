@@ -5,22 +5,36 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
+
 header {
   background-color: #007acc;
   color: white;
   padding: 20px;
   text-align: center;
 }
+
+header h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+header p, header a {
+  color: white;
+}
+
 section {
   margin: 20px 0;
 }
+
 h1, h2 {
   color: #007acc;
 }
+
 a {
   color: #007acc;
   text-decoration: none;
 }
+
 footer {
   text-align: center;
   padding: 10px;
