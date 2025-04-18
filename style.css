@@ -33,6 +33,14 @@ a {
   color: #007acc;
   text-decoration: none;
 }
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 10px;
+}
 
 footer {
   text-align: center;
