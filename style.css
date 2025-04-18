@@ -13,12 +13,11 @@ header {
   text-align: center;
 }
 
-header h1 {
-  color: white;
-  margin-bottom: 10px;
-}
-
-header p, header a {
+header h1,
+header p,
+header a,
+header span,
+header i {
   color: white;
 }
 
