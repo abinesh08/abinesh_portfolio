@@ -1,38 +1,36 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-
-function updateDateTime() {
-  const now = new Date();
-  const datetime = now.toLocaleString();
-  document.getElementById("datetime").textContent = `Last updated: ${datetime}`;
-}
-updateDateTime();
-
-const backToTopButton = document.getElementById("backToTop");
-
-
-// Back to Top Button Logic
-const backToTopBtn = document.getElementById("backToTop");
-
+// Show or hide the back-to-top button on scroll
 window.onscroll = function () {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+  const backToTopBtn = document.querySelector(".back-to-top");
+  if (window.scrollY > 300) {
     backToTopBtn.style.display = "block";
   } else {
     backToTopBtn.style.display = "none";
   }
 };
 
-backToTopBtn.addEventListener("click", function () {
+// Function called on button click
+function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// DateTime Logic
-function updateDateTime() {
-  const now = new Date();
-  const dateTimeString = now.toLocaleString();
-  document.getElementById("datetime").textContent = dateTimeString;
 }
 
-// Update immediately and then every second
-updateDateTime();
-setInterval(updateDateTime, 1000);
+// Update date and time every second
+function updateDateTime() {
+  const datetimeDisplay = document.querySelector(".datetime");
+  const footerYear = document.querySelector(".footer-year");
+  const now = new Date();
 
+  if (datetimeDisplay) {
+    datetimeDisplay.textContent = now.toLocaleString(); // eg: 4/19/2025, 10:20:30 AM
+  }
+
+  if (footerYear) {
+    // Optional: If you want the year to always match current year
+    footerYear.innerHTML = `© ${now.getFullYear()} Abinesh R | Built with ❤️`;
+  }
+}
+
+// Run once at page load
+updateDateTime();
+
+// Then update every second automatically
+setInterval(updateDateTime, 1000);
