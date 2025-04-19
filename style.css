@@ -68,3 +68,25 @@ footer {
   background-color: #eee;
   margin-top: 30px;
 }
+
+#backToTop {
+  display: none; 
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #0056b3;
+}
+
