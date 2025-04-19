@@ -9,6 +9,7 @@ updateDateTime();
 
 const backToTopButton = document.getElementById("backToTop");
 
+
 window.onscroll = function () {
   if (document.documentElement.scrollTop > 200) {
     backToTopButton.style.display = "block";
