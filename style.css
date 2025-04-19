@@ -69,8 +69,7 @@ footer {
   margin-top: 30px;
 }
 
-#backToTop {
-  display: none; 
+button {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -79,14 +78,13 @@ footer {
   border: none;
   outline: none;
   background-color: #007bff;
-  color: blue;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   padding: 12px;
   border-radius: 50%;
   transition: background-color 0.3s;
-}
-
-#backToTop:hover {
+} 
+ button:hover {
   background-color: #0056b3;
 }
 
