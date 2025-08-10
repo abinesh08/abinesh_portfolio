@@ -1,268 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Abinesh R | Java Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    body {
-      transition: background-color 0.3s, color 0.3s;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .profile-photo {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 20%;
-      margin-bottom: 10px;
-    }
-
-    .theme-toggle {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-
-    .themeToggleBtn {
-      border: none;
-      background: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .download-btn {
-      display: inline-block;
-      padding: 12px 24px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: 2px solid #007bff;
-      color: #007bff;
-      background-color: transparent;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .download-btn:hover {
-      background-color: #007bff;
-      color: white;
-      transform: scale(1.05);
-    }
-
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-
-    .fade-in-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      background: #f8f9fa;
-      color: #333;
-      margin-top: 50px;
-    }
-
-    .backToTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 10px 15px;
-      font-size: 18px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    /* Dark Mode */
-    body.dark-mode {
-      background-color: #121212;
-      color: #f5f5f5;
-    }
-
-    body.dark-mode footer {
-      background-color: #1e1e1e;
-      color: #ccc;
-    }
-
-    body.dark-mode .download-btn {
-      color: #00d1ff;
-      border-color: #00d1ff;
-    }
-
-    body.dark-mode .download-btn:hover {
-      background-color: #00d1ff;
-      color: #000;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <title>Abinesh R — Java Developer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header class="text-center p-4 fade-in-up">
-    <img src="New passport Size Photo.jpg" alt="Abinesh R" class="profile-photo">
-    <h1>Abinesh R</h1>
-    <p>Software Engineer | Java Developer</p>
-    <p>
-      <a href="mailto:abiabinesh12002@gmail.com">abiabinesh12002@gmail.com</a> |
-      📞 +91 63856 38070 |
-      <a href="https://www.linkedin.com/in/abinesh-raja/">LinkedIn</a>
-    </p>
-    <div class="theme-toggle">
-      <button onclick="toggleTheme()" class="themeToggleBtn" id="themeToggleBtn">🌙</button>
+  <!-- Header / Hero -->
+  <header class="hero">
+    <nav class="nav container">
+      <div class="brand">Abinesh R</div>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
+        <a class="btn-resume" href="Abinesh-Resume.pdf" download>📄 Resume</a>
+      </div>
+    </nav>
+
+    <div class="hero-content container" data-aos="fade-up">
+      <img src="New passport Size Photo.jpg" alt="Abinesh R" class="avatar">
+      <h1>Abinesh R</h1>
+      <h2 class="typewriter">Java Developer • Spring Boot • Microservices</h2>
+      <p class="lead">Building reliable backend systems, RESTful APIs and modular microservices. Passionate about testing, automation and clean architecture.</p>
+      <div class="hero-ctas">
+        <a href="#experience" class="btn primary" id="exp">Experience</a>
+        <a href="#projects" class="btn ghost">Projects</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="my-5 fade-in-up">
-      <h2>About Me</h2>
-      <p>I am a Java Developer with 1.5 years of experience in software development, testing, deployment, and support using agile methodologies. I specialize in building and maintaining RESTful APIs using Java, Spring Boot, and Microservices architecture. I’m passionate about clean code, automation, and continuous learning.</p>
-    </section>
+  <!-- Summary / Quick info -->
+  <section class="section container" id="about" data-aos="fade-up">
+    <div class="grid two-col">
+      <div>
+        <h3>Summary</h3>
+        <p>Software Engineer | Java Developer — 1.5 years experience building Spring Boot microservices, REST APIs, and tested containerised services. Seeking to contribute in a fast-growing organization.</p>
+        <p><strong>Contact:</strong> abiabinesh12002@gmail.com • <a href="https://leetcode.com/u/Abinesh_R/" target="_blank">LeetCode</a></p>
+      </div>
 
-    <section class="my-5 fade-in-up">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Core Java, Java 23</li>
-        <li><strong>Frameworks:</strong> Spring Boot, Spring MVC, Spring Data JPA, Microservices Architecture</li>
-        <li><strong>Tools:</strong> IntelliJ, Postman, Git, Azure DevOps, Maven, JUnit</li>
-        <li><strong>Technologies:</strong> RESTful APIs, JSON</li>
-        <li><strong>Database:</strong> PostgreSQL</li>
-      </ul>
-    </section>
-
-    <section class="my-5 fade-in-up">
-      <h2>Projects</h2>
-
-      <h3>HyperSkool - Java Developer @ Lixo Technologies (Apr 2024 - Present)</h3>
-      <ul>
-        <li>Designed RESTful API endpoints for user registration and authentication</li>
-        <li>Implemented robust error handling mechanisms</li>
-        <li>Developed test cases using JUnit with JSON input/output</li>
-        <li>Deployed applications locally with Maven build</li>
-        <li>Tested HTTP services using Postman</li>
-      </ul>
-
-      <h3>Intern - Intellect Design Arena (Oct 2023 - Nov 2023)</h3>
-      <ul>
-        <li>Enhanced management and team collaboration skills</li>
-        <li>Gained hands-on experience in Java and fintech operations</li>
-      </ul>
-      <br>
-
-      <h2>Personal Projects</h2>
-
-      <h3>NextHood (Aug 2025 - Present)</h3>
-      <ul>
-        <li>Built a Spring Boot based microservices application allowing citizens to digitally report local issues (potholes, garbage,
-streetlights, suspicious activity) with geo-tagged photos.
-</li>
-        <li>Implemented fine-grained RBAC (Role-Based Access Control) using Spring Security with hierarchical roles (Resident →
-Volunteer → Admin).</li>
-        <li>Secured authentication workflows using JWT tokens and stateless session management</li>
-        <li>Implemented issue life-cycle management with status tracking, assignment, comments, and real-time updates.
-</li>
-        <li>Developed community feedback features (up-vote/down-vote, moderation, discussion) to prioritise recurring incidents.</li>
-        <li>Integrated email notifications for stakeholders on status changes using JavaMailSender.</li>
-        <li>Wrote unit test cases using JUnit5 and Mockito to validate key business workflows and ensure reliability.</li>
-        <li>Containerised individual services using Docker and verified behaviour locally before deployment.</li>
-        <li><strong>Technologies:</strong> : Java 21, Spring Boot, Spring MVC, Spring Security, MySQL, Spring Data JPA, Mockito, JUnit, Docker</li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/abinesh08/NextHood" target="_blank">View Project</a></li>
-      </ul>
-
-      <h3>StudentCart (June 2025 - Aug 2025)</h3>
-      <ul>
-        <li>Developed a smart document submission platform enabling remote file uploads to reduce crowding at xerox shops.</li>
-        <li>Implemented secure JWT-based login using Spring Security for user authentication.</li>
-        <li>Designed Modulith architecture with Spring MVC for clean module separation.</li>
-        <li>Integrated MySQL with Spring Data JPA for efficient document and user data management.</li>
-        <li><strong>Technologies:</strong> : Java 21, Spring Boot, Java Modulith Architecture, Maven, Restful APIs, Junit, Spring MVC, Spring Data JPA,
-Spring Security, MySQL.</li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/abinesh08/StudentCart" target="_blank">View Project</a></li>
-      </ul>
-
-      <h3>FieldGuard (Mar 2025 - June 2025)</h3>
-      <ul>
-        <li>Modernized version of NREGA Mobile Monitoring App</li>
-        <li>Smart field attendance and worker documentation system</li>
-        <li>Developed using Spring Boot with Java Modulith architecture</li>
-        <li>Designed APIs and implemented JUnit test cases</li>
-        <li><strong>Technologies:</strong> Java 23, Spring Boot, Java Modulith Architecture, Maven, Restful APIs, Junit, Spring MVC, Spring JPA, MySQL</li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/abinesh08/FieldGuard" target="_blank">View Project</a></li>
-      </ul>
-
-      <h3>Banking Application (Mar 2024 - Apr 2024)</h3>
-      <ul>
-        <li>Developed as part of personal learning to understand backend banking systems</li>
-        <li>Created RESTful API endpoints to simulate real banking operations</li>
-        <li>Explored Microservices architecture and backend integration</li>
-        <li><strong>Technologies:</strong> Java 17, Microservices, RESTful APIs</li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/abinesh08/Banking-Application" target="_blank">View Project</a></li>
-      </ul>
-    </section>
-
-    <section class="my-5 fade-in-up">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>BE - Computer Science,</strong> Rajalakshmi Institute of Technology, Chennai (2023), CGPA: 7.47</li>
-        <li><strong>HSC -</strong> SRV Boys Hr. Sec School, Namakkal (2019) – 64.8%</li>
-        <li><strong>SSLC -</strong> Vivekananda Matric Hr. Sec School, Mayiladuthurai (2017) – 74.6%</li>
-      </ul>
-    </section>
-
-    <div class="text-center">
-      <a href="./Abinesh R - New Updated Resume.pdf.pdf" download class="download-btn mt-3">📄 Download Resume</a>
+      <div>
+        <h3>Top Skills</h3>
+        <div id="skill-chips" class="chips"></div>
+        <div class="skill-bars">
+          <div class="skill-row"><span>Java</span><div class="bar"><div class="bar-fill" data-fill="92%"></div></div></div>
+          <div class="skill-row"><span>Spring Boot</span><div class="bar"><div class="bar-fill" data-fill="88%"></div></div></div>
+          <div class="skill-row"><span>Microservices</span><div class="bar"><div class="bar-fill" data-fill="88%"></div></div></div>
+          <div class="skill-row"><span>SQL / MySQL</span><div class="bar"><div class="bar-fill" data-fill="80%"></div></div></div>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <button class="backToTop" onclick="scrollToTop()" title="Go to top">⬆️</button>
+  <section id="experience" class="section container" data-aos="fade-up">
+    <h3>Experience</h3>
 
-  <footer>
-    <p>© <span class="year">2025</span> Abinesh R | Built with ❤️</p>
-    <p class="datetime"></p>
+    <div class="exp-card">
+      <h4>Software Engineer | Java Developer — Lixo Technologies</h4>
+      <p class="muted">April 2024 - Present, Chennai</p>
+      <ul>
+        <li><strong>Project:</strong> HyperSkool — Designed and implemented RESTful API endpoints for user registration, authentication and lifecycle flows.</li>
+        <li>Implemented robust error handling, validation and test cases using JUnit (JSON I/O tests).</li>
+        <li>Built and deployed microservices using Spring Boot / Spring MVC, Spring Data JPA and PostgreSQL.</li>
+        <li>Used JWT for stateless authentication and Spring Security for RBAC; packaged services with Docker for local testing.</li>
+        <li>REST API Development Creating Restful API for each microservices
+        </li>
+        <li>Checking the HTTP requests of services using the Configured for Postman tool.
+        </li>
+        <li>Enthusiastic about Agile methodologies and experienced in collaborative software development.
+</li>
+        <li>Created and managed Docker containers for local development and testing, ensuring each microservice runs in isolated
+environments with specified ports and resources</li>
+        <li>Packaged Spring Boot microservices into Docker containers for consistent development and deployment across environments.
+</li>
+        <li>Tools: IntelliJ, Postman, Maven, Git, Azure DevOps, PostgreSQL</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <h4>Associate Consultant (Intern) — Intellect Design Arena</h4>
+      <p class="muted">October 2023 - November 2023, Chennai</p>
+      <ul>
+        <li>Enhanced management skills and collaborated on fintech tasks. Gained practical Java experience and exposure to enterprise development workflows.</li>
+      </ul>
+    </div>
+
+    <p class="summary-para">Seeking a position to apply skills in backend development, testing, deployment and agile collaboration.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container" data-aos="fade-up">
+    <div class="section-head">
+      <h3>Projects</h3>
+      <div id="filters" class="filters" aria-label="Filter projects by skill"></div>
+    </div>
+
+    <div id="project-list" class="grid cards" aria-live="polite"></div>
+  </section>
+
+  <!-- Project modal -->
+  <div id="projectModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close"><i class="fa fa-times"></i></button>
+      <img id="modalImage" src="" alt="" />
+      <div class="modal-details">
+        <h4 id="modalTitle"></h4>
+        <p id="modalDescription"></p>
+        <div id="modalSkills" class="chips"></div>
+        <div class="modal-actions">
+          <a id="modalGit" href="#" target="_blank" class="btn primary"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="section container" data-aos="fade-up">
+    <h3>Contact</h3>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Get in touch</h4>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=abiabinesh12002@gmail.com" target="_blank">abiabinesh12002@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/abinesh-raja/" target="_blank">/in/abinesh-raja</a></p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="email" id="email" placeholder="Your email" required />
+        <textarea id="message" rows="5" placeholder="Message" required></textarea>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer & back to top -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Abinesh R</div>
+      <div class="socials">
+        <a href="https://github.com/abinesh08" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abinesh-raja/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
   </footer>
+  <button id="backTop" class="back-top" title="Back to top"><i class="fa fa-chevron-up"></i></button>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Scripts -->
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-      const icon = document.getElementById('themeToggleBtn');
-      icon.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    }
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    window.addEventListener('scroll', function () {
-      document.querySelectorAll('.fade-in-up').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('visible');
-        }
-      });
-    });
-
-    // Set current year
-    document.querySelector('.year').textContent = new Date().getFullYear();
-
-    // Set datetime
-    document.querySelector('.datetime').textContent = new Date().toLocaleString();
-  </script>
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script> AOS.init({once:true, duration:700}); </script>
 </body>
 </html>

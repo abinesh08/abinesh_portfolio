@@ -1,0 +1,42 @@
+[
+  {
+    "id": "nexthood",
+    "title": "NextHood",
+    "short": "NextHood is a community-driven platform to report & resolve neighborhood issues.",
+    "description": "NextHood enables residents, volunteers and authorities to report potholes, garbage, streetlight outages, and suspicious activities with geo-tagged photos, voting and status updates.",
+    "skills": ["Java","Spring Boot","Microservices","MySQL","JWT","Docker","Spring Data JPA","Spring Security","AWS EC2","AWS S3"],
+    "image": "images/nextHood.jpg",
+    "github": "https://github.com/abinesh08/NextHood",
+    "demo": ""
+  },
+  {
+    "id": "studentcart",
+    "title": "StudentCart",
+    "short": "Smart document submission & modulith architecture.",
+    "description": "A document submission platform optimized for students to upload scanned documents remotely. Uses Java Modulith, Spring Security with JWT and MySQL.",
+    "skills": ["Java","Spring Boot","MySQL","Spring Security","Junit","REST API","Modulith Architecture"],
+    "image": "images/StudentCart.jpg",
+    "github": "https://github.com/abinesh08/StudentCart",
+    "demo": ""
+  },
+  {
+    "id": "fieldguard",
+    "title": "FieldGuard",
+    "short": "Field attendance & worker documentation system.",
+    "description": "FieldGuard monitors field workers (attendance, docs and reports). Backend built with Spring Boot, JUnit coverage and modulith patterns.",
+    "skills": ["Java","Spring Boot","Junit","MySQL","Modulith Architecture"],
+    "image": "images/fieldGaurd.jpg",
+    "github": "https://github.com/abinesh08/FieldGuard",
+    "demo": ""
+  },
+  {
+    "id": "banking",
+    "title": "Banking Application",
+    "short": "Backend API simulating banking flows.",
+    "description": "Implemented microservice-style banking APIs: accounts, transactions and basic security patterns for learning.",
+    "skills": ["Java","Microservices"],
+    "image": "images/BankingApp.jpg",
+    "github": "https://github.com/abinesh08/Banking-Application",
+    "demo": ""
+  }
+]
